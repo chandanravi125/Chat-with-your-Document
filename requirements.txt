@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+langchain
+langchain-unstructured
+langchain-community
+langchain-google-genai
+sentence-transformers
+faiss-cpu
+nltk
+python-dotenv
+streamlit
+requests
