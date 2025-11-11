@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - MISTRAL_API_KEY=your_mistral_api_key
 
   streamlit:
     build:

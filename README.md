@@ -30,8 +30,7 @@ pip install -r requirements.txt
 
 2. Run FastAPI locally:
 
-bash
-uvicorn main:app --reload
+python -m uvicorn main:app --reload
 
 Open the API docs in your browser: http://127.0.0.1:8000/docs
 3. Build and run with Docker:

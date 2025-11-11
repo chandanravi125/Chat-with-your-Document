@@ -17,13 +17,21 @@ rag_chain = RAGChain(vector_store)
 
 @app.get("/")
 def index():
-    return "Welcome to the Persona Agent API!"
+    return "Welcome to the Chat with me!"
 
 @app.post("/ask")
+# def ask_question(question: Question):
+#     try:
+#         answer, context = rag_chain.answer(question.question)
+#         return {"question": question.question, "answer": answer, "context": context}
+#     except Exception as e:
+#         print(f"Error answering question: {e}")
+#         return {"error": "Failed to answer question"}
+#     @app.post("/ask")
 def ask_question(question: Question):
     try:
-        answer, context = rag_chain.answer(question.question)
-        return {"question": question.question, "answer": answer, "context": context}
+        answer = rag_chain.answer(question.question)
+        return {"question": question.question, "answer": answer}
     except Exception as e:
         print(f"Error answering question: {e}")
         return {"error": "Failed to answer question"}
