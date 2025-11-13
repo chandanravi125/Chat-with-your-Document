@@ -31,8 +31,8 @@ pip install -r requirements.txt
 python -m uvicorn main:app --reload
 
 Open the API docs in your browser: http://127.0.0.1:8000/docs
-3. Build and run with Docker:
 
+3. Build and run with Docker:
 bash
 docker-compose up --build
 
