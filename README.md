@@ -5,8 +5,8 @@ Build, containerize, and test a simple "Chat with Document" application using Re
 ## Folder Structure
 - data/
     - Transformer.pdf
-- data_ingestion.py
-- rag_chain.py
+- rag_retriever.py
+- response_generator.py
 - main.py
 - streamlit_app.py
 - requirements.txt
@@ -15,8 +15,8 @@ Build, containerize, and test a simple "Chat with Document" application using Re
 - docker-compose.yml
 
 ## Core Components
-1. Data Ingestion: Load PDF, split into chunks, generate embeddings.
-2. RAG Chain: Use LangChain for retrieval and generation.
+1. Create Vector store: Load PDF, split into chunks, generate embeddings and create FAISS indexes
+2. Respose Generation: Use model anf frame prompt and generation.
 3. FastAPI Endpoint: POST /ask to answer questions.
 4. Streamlit App: Send questions to FastAPI endpoint and display answers.
 
@@ -41,7 +41,7 @@ docker-compose up --build
 4. Run Streamlit app:
 
 bash
-streamlit run streamlit_app.py
+python -m streamlit run streamlit_app.py
 
 Visit http://localhost:8501
 

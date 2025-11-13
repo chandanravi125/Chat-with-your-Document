@@ -4,11 +4,11 @@ pydantic
 langchain
 langchain-unstructured
 langchain-community
-mistralai
-sentence-transformers
+langchain-google-genai
+langchain-huggingface
 faiss-cpu
 nltk
 python-dotenv
 streamlit
 requests
-langchain-huggingface
+sentence-transformers
