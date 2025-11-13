@@ -5,9 +5,9 @@ Build, containerize, and test a simple "Chat with Document" application using Re
 ## Folder Structure
 - data/
     - Transformer.pdf
-- rag_retriever.py
-- response_generator.py
-- main.py
+- rag_retriever.py    # load doc and create Vector store; get_relevant_docs
+- response_generator.py   # Use mode and prompt and generate the response
+- main.py   # FastAPI
 - streamlit_app.py
 - requirements.txt
 - Dockerfile.fastapi
@@ -15,7 +15,7 @@ Build, containerize, and test a simple "Chat with Document" application using Re
 - docker-compose.yml
 
 ## Core Components
-1. Create Vector store: Load PDF, split into chunks, generate embeddings and create FAISS indexes
+1. Retrieve docs : Load PDF, split into chunks, generate embeddings and create FAISS indexes
 2. Respose Generation: Use model anf frame prompt and generation.
 3. FastAPI Endpoint: POST /ask to answer questions.
 4. Streamlit App: Send questions to FastAPI endpoint and display answers.
@@ -23,9 +23,7 @@ Build, containerize, and test a simple "Chat with Document" application using Re
 ## Setup and Run
 1. Clone the repository and install dependencies:
 
-bash
-git clone <your-repo-link>
-cd <your-repo-name>
+
 pip install -r requirements.txt
 
 2. Run FastAPI locally:
@@ -48,7 +46,7 @@ Visit http://localhost:8501
 Tech Stack
 - Backend: FastAPI, LangChain, FAISS
 - Embeddings: Hugging Face (all-MiniLM-L6-v2)
-- LLM: Free / Public API (e.g., Gemini)
+- LLM: (Gemini)
 - Frontend: Streamlit
 - Containerization: Docker & Docker Compose
 
